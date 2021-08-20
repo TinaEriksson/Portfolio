@@ -4,6 +4,13 @@ body {
     padding: 0;
 }
 
+:root {
+    --clr-primary-light: white;
+    --clr-primary: #48606E;
+    --clr-primary-dark: black;
+    --clr-secondary: #292b2c;
+  }
+
 *,
 *::before,
 *::after {
@@ -18,7 +25,7 @@ body {
 #mainHeader {
     background-image: url("/img/headerBackground.jpg");
     background-position: center;
-    min-height: 20em; 
+    min-height: 10em; 
     min-width: 100%;
 }
 
@@ -29,7 +36,7 @@ body {
 }
 
 #menuButton{
-    color: white;
+    color: var(--clr-primary-light);
     font-size: 2.5rem;
     position: absolute;
     right: 0.8em;
@@ -37,60 +44,60 @@ body {
 
 #menu {
     display: none;
-    padding-top: 3.5em; 
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1em;
+    padding-top: 2.5em; 
+}
+
+#menu ul{
+    margin-top: 1.5em;
+}
+
+#menu ul li {
+    list-style: none;
+}
+
+.right{
+    text-align: end;
 }
 
 #menu a {
     text-decoration: none;
-    color: white;
+    color: var(--clr-primary-light);
     font-size: 1.5rem;
 }
 
 main {
-    padding: 1em 2em;
+    padding: 1em;
 }
 
 section {
-  padding: 1em 2em;
-  text-align: center;
-}
-
-.card-img {
-    height: 30vh;
-    width: 30vh;
-    border-radius: 10em;
-}
-
-aside {
-    padding: 1em 2em;
-    text-align: center;
+    margin-bottom: 1.5em;
 }
 
 aside a {
-    border: 0.13em solid 	#292b2c;
-    padding: 0.2em 1em;
-    border-radius: 0.5em;
     text-decoration: none;
     color: black;
+}
 
+#contactbtn,
+aside button {
+    padding: 0.2em 2em;
+    border:0.13em solid var(--clr-secondary);
+    border-radius: 0.5em;
+    margin: 0;
 }
 
 #social__media {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 1em;
-    gap: 1em;
-    padding: 1em;
+    gap: 1.5em;
+    padding: 2em 1em;
 }
 
 #social__media a {
     padding: 0.3em 0.6em;
     color: white;
-    border: 0.1em solid white;
+    border: 0.1em solid var(--clr-primary-light);
     border-radius: 0.5em;
     font-size: 1.5rem;
 }
@@ -98,12 +105,54 @@ aside a {
 footer {
     text-align: center;
     min-height: 3em;
-    background-color: #48606E;
-    color: white;
+    background-color: var(--clr-primary);
+    color: var(--clr-primary-light);
 }
 
 footer p {
     padding-bottom: 1em;
     margin-top: 0;
     font-size: 1.4rem;
+    text-align: center;
 }
+
+/* The Modal (background) */
+.popup {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    top:30%;
+    width: 100%; /* Full width */
+    height: 80%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content */
+  .popup-content {
+    background-color: var(--clr-primary);
+    margin: 0 auto;
+    padding: 1em;
+    border: 0.15em solid var(--clr-secondary);
+    width: 80%;
+    min-height: 25em;
+  }
+  
+  /* The Close Button */
+  .closeBtn {
+    color: var(--clr-secondary);
+    display: flex;
+    justify-content: flex-end;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closeBtn:hover,
+  .closeBtn:focus {
+    color: var(--clr-primary-dark);
+    text-decoration: none;
+    cursor: pointer;
+  } 
+
+
+
