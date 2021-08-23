@@ -17,71 +17,78 @@
                 <div id="menu">
                     <ul>
                         <li class="right"><a href="index.html">Home</a></li>
-                        <li class="right"><a href="about.html">About</a></li>
-                        <li class="right"><a href="portfolio.html">Portfolio</a></li>
+                        <li class="right"><a href="#">Portfolio</a></li>
+                        <li class="right"><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
         </nav>
     </header>
     <main class="container">
         <div class="row">
-    <section class="col-12 col-md-6">
-        <h1>Hello, my name is Tina.</h1>
-        <p class="p-md-1"></p>I'm studying .NET-development on Campus Mölndal, in Gothenburg. 
-        But because of Covid, i'm doing it from home. My dream is to
-        one day do this for a living, be great at it and have fun at work.</p>
-        <img src="img/tina.jpg" class="card-img" alt="En bild på mig.">
-        
-        <div id="myPopup" class="popup">
+            <section class="col-12 col-md-6" id="biography_section">
+            <h1>Hello, my name is Tina.</h1>
+            ​<picture>
+                <img src="img/tina.jpg" class="img-fluid img-thumbnail " alt="picture of me.">
+              </picture>
+            <p class="p-md-1"></p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quas eaque voluptatem corrupti itaque quis consequatur aut. Eaque, saepe! Natus reprehenderit itaque sequi sint dignissimos facilis nisi modi alias perferendis.</p>
+            </section>
 
-            <!-- Modal content -->
-            <div class="popup-content">
-              <span class="closeBtn">&times;</span>
-                <div id="modal__header">
-                    <h1>Contact me</h1>
-                    <h3>I will get back to you as soon as possible.</h3>
+            <section class="col-12 col-md-6" id="cv__section">
+            
+            <p class="p-md-1"></p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto ut consequatur in consequuntur voluptatibus numquam voluptatem amet. Quaerat tempora iste ullam repellat laboriosam voluptatum quia autem, dolorum eaque dicta.</p>
+            <h3>Want to read my CV?</h3>
+            <button><a href="tinaCV.pdf" download>Download CV</a></button>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-12 col-md-6" id="education">
+                <h1>Education</h1>
+                <div>
+                    <h4>.NET-utvecklare, Campus Mölndal.</h4>
+                    <h6>■ November 2020 - Juni 2022</h6>
+                    <p> bla bla bla bla bla</p>
+
                 </div>
-                
-                <form action="" method="">
-                    <form class="row g-1 needs-validation" novalidate>
-                        <div class="col-md-4 position-relative">
-                          <label for="validationTooltip01" class="form-label">Name:</label>
-                          <input type="text" class="form-control" id="name" placeholder="Firstname Lastname" required>
-                        </div>
-                        <div class="col-md-2 position-relative">
-                          <label for="Email" class="form-label">Email:</label>
-                          <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
-                          <div class="mb-3">
-                            <label for="validationTextarea" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" placeholder="Enter your message.." required></textarea>
-                        </div>
-                            <br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                <div>
+                    <h4>IT-utvecklare, Hermods Östersund.</h4>
+                    <h6>■ Mars 2020 - November 2020</h6>
+                    <p>Bla bla bla bla bla</p>
 
-            </div>
-        </div> 
-    </section>
-    <aside class="col-12 col-md-6">
-    <h2>Want to read my CV?</h2>
-    <p class="p-md-1"></p>You can just download it. Or you can check out my
-    about page, to get to know me. And my portfolio page to see what i
-    have done in the past.</p>
-        <button><a href="tinaCV.pdf" download>Download CV</a></button>
-        <button id="contactbtn">Contact</button>
-</aside>
-</div>
-</main>
-<footer>
-    <div id="social__media">
-        <a href="https://www.facebook.com/tina.eriksson.313"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com/tinakeriksson"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/tiinaeriksson/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/tina-eriksson-b50a201bb/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </section>
+            <section class="col-12 col-md-6" id="work">
+                <h1>Work</h1>
+                <div>
+                    <h4>Assistant nurse, Östersunds kommun.</h4>
+                    <h6>■ 2009-2020</h6>
+                    <p>Helped the elderly to get dressed, and gave them food. 
+                    Also made sure they took the medications they needed. 
+                    Another task could be to treat and redress wounds.</p>
+
+                </div>
+                <div>
+                    <h4>Assistant nurse, Humana Assistans.</h4>
+                    <h6>■ 2013-2014</h6>
+                    <p>Worked for a woman that was sick in MS (Multiple Sclerosis).
+                    My duties ranged from helping with morning hygiene, 
+                    dressing and feeding. To give medicine and accompany you 
+                    to the cinema and restaurant visits.
+                    </p>
+
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div id="social__media">
+
+            <a href="https://twitter.com/tinakeriksson"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/tiinaeriksson/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/tina-eriksson-b50a201bb/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>©Tina Eriksson</p>
+        </footer>
     </div>
-    <p>©Tina Eriksson</p>
-</footer>
-</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/a60ef7f392.js" crossorigin="anonymous"></script>

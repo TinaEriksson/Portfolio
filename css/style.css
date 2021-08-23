@@ -6,7 +6,7 @@ body {
 
 :root {
     --clr-primary-light: white;
-    --clr-primary: #48606E;
+    --clr-secondary-light: #cccccc;
     --clr-primary-dark: black;
     --clr-secondary: #292b2c;
   }
@@ -20,6 +20,7 @@ body {
 
 .wrapper {    
     height: 100%;
+    background-color:#cccccc;
 }
 
 #mainHeader {
@@ -44,11 +45,10 @@ body {
 
 #menu {
     display: none;
-    padding-top: 2.5em; 
 }
 
 #menu ul{
-    margin-top: 1.5em;
+    margin-top: 3.5em;
 }
 
 #menu ul li {
@@ -73,13 +73,59 @@ section {
     margin-bottom: 1.5em;
 }
 
-aside a {
+#biography_section,
+#cv__section, 
+#education,
+#work {
+    margin: 0.5em 0;
+    background-color: #565a5d;
+    color: var(--clr-secondary-light);
+    padding: 1em;
+}
+
+#cv__section, 
+#work {
+    background-color: #3d4142;
+}
+
+
+#cv__section a {
     text-decoration: none;
     color: black;
 }
 
+#optional__contact {
+    background-color: #3d4142;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    
+    #biography_section,
+    #cv__section {
+        background-color: #565a5d;
+    }
+
+    #biography_section img {
+        height: 30vh;
+        width: 30vh;
+    }
+
+    #education, 
+    #work {
+        background-color:#3d4142 ;
+    }
+
+    
+}
+
+section form {
+    padding: 1em; 
+    margin: 1em;
+}
+
 #contactbtn,
-aside button {
+#cv__section button {
     padding: 0.2em 2em;
     border:0.13em solid var(--clr-secondary);
     border-radius: 0.5em;
@@ -105,7 +151,7 @@ aside button {
 footer {
     text-align: center;
     min-height: 3em;
-    background-color: var(--clr-primary);
+    background-color: var(--clr-secondary);
     color: var(--clr-primary-light);
 }
 
@@ -115,44 +161,5 @@ footer p {
     font-size: 1.4rem;
     text-align: center;
 }
-
-/* The Modal (background) */
-.popup {
-    display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    top:30%;
-    width: 100%; /* Full width */
-    height: 80%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-  }
-  
-  /* Modal Content */
-  .popup-content {
-    background-color: var(--clr-primary);
-    margin: 0 auto;
-    padding: 1em;
-    border: 0.15em solid var(--clr-secondary);
-    width: 80%;
-    min-height: 25em;
-  }
-  
-  /* The Close Button */
-  .closeBtn {
-    color: var(--clr-secondary);
-    display: flex;
-    justify-content: flex-end;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .closeBtn:hover,
-  .closeBtn:focus {
-    color: var(--clr-primary-dark);
-    text-decoration: none;
-    cursor: pointer;
-  } 
-
 
 
