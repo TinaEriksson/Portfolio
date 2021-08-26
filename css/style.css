@@ -5,13 +5,15 @@ body {
 }
 
 :root {
-    --clr-primary-light: white;
-    --clr-secondary-light: #cccccc;
-    --clr-primary-dark: black;
-    --clr-secondary: #292b2c;
-  }
+    --clr-textcolor: #FFEBCD;
+    --clr-primary-light:#AFAC99;
+    --clr-secondary-light: #BFCBA8;
+    --clr-primary-dark: #464F41;
+    --clr-darkGrey: #5B8A72;
+    --clr-midGrey: #56776C;
+}
 
-*,
+*
 *::before,
 *::after {
   /* Inkluderar padding och border i width och height utrökningar. */
@@ -19,20 +21,33 @@ body {
 }
 
 .wrapper {    
-    height: 100%;
-    background-color:#cccccc;
+    min-height: 100%;
+    width: 100%;
+    padding: 1em;
+    background-color: var(--clr-secondary-light);
+
+
+}
+
+.container {
+    min-width: 100%;
+    padding: 0;
+}
+
+.row {
+    margin: 0 0 0.5em 0;
 }
 
 #mainHeader {
-    background-image: url("/img/headerBackground.jpg");
-    background-position: center;
+
+    background-color: var(--clr-primary-dark);
     min-height: 10em; 
     min-width: 100%;
 }
 
 .navbar-dark{
     padding: 2em;
-    width: 100%;
+    min-width: 100%;
     position: relative;
 }
 
@@ -65,45 +80,79 @@ body {
     font-size: 1.5rem;
 }
 
-main {
-    padding: 1em;
-}
-
-section {
-    margin-bottom: 1.5em;
-}
-
 #biography_section,
 #cv__section, 
 #education,
 #work {
-    margin: 0.5em 0;
-    background-color: #565a5d;
-    color: var(--clr-secondary-light);
+    margin: 0.4em 0;
+    background-color: var(--clr-darkGrey);
+    color: var(--clr-textcolor);
     padding: 1em;
 }
 
 #cv__section, 
 #work {
-    background-color: #3d4142;
+    background-color: var(--clr-midGrey);
+}
+
+#portfolio {
+    padding: 2em;
+}
+
+
+#education h1, 
+#work h1 {
+    margin-bottom: 1em;
 }
 
 
 #cv__section a {
     text-decoration: none;
-    color: black;
+    color: var(--clr-primary-dark);
 }
 
-#optional__contact {
-    background-color: #3d4142;
-    color: white;
+#contact {
+    text-align: center;
+}
+
+#cv__section button {
+    padding: 0.2em 2em;
+    border:0.11em solid var(--clr-primary-dark);
+    border-radius: 0.5em;
+    margin: 0;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+}
+#contact a {
+    color: var(--clr-textcolor);
+    font-size: 3rem;
+}
+
+footer {
+    background-color: var(--clr-primary-dark);
+    text-align: center;
+    min-height: 3em;
 }
 
 @media screen and (min-width: 768px) {
     
     #biography_section,
+    #cv__section, 
+    #education,
+    #work {
+    background-color: var(--clr-darkGrey);
+    color: var(--clr-textcolor);
+    padding: 3em;
+}
+
+    #biography_section,
     #cv__section {
-        background-color: #565a5d;
+        background-color: var(--clr-darkGrey);
     }
 
     #biography_section img {
@@ -113,53 +162,19 @@ section {
 
     #education, 
     #work {
-        background-color:#3d4142 ;
+        background-color:var(--clr-midGrey) ;
     }
 
+    #contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1.5em;
+        padding: 2em 1em;
+    }
     
+    #contact a:hover
+    {
+        color: var(--clr-primary-dark)
+    }
 }
-
-section form {
-    padding: 1em; 
-    margin: 1em;
-}
-
-#contactbtn,
-#cv__section button {
-    padding: 0.2em 2em;
-    border:0.13em solid var(--clr-secondary);
-    border-radius: 0.5em;
-    margin: 0;
-}
-
-#social__media {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.5em;
-    padding: 2em 1em;
-}
-
-#social__media a {
-    padding: 0.3em 0.6em;
-    color: white;
-    border: 0.1em solid var(--clr-primary-light);
-    border-radius: 0.5em;
-    font-size: 1.5rem;
-}
-
-footer {
-    text-align: center;
-    min-height: 3em;
-    background-color: var(--clr-secondary);
-    color: var(--clr-primary-light);
-}
-
-footer p {
-    padding-bottom: 1em;
-    margin-top: 0;
-    font-size: 1.4rem;
-    text-align: center;
-}
-
-
