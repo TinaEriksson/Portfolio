@@ -10,6 +10,7 @@
     <title>Tina Eriksson - Home</title>
 </head>
 <body>
+    <div class="wrapper">
     <header id="mainHeader">
         <nav class="navbar-dark">
             <div id="menuButton"><i class="fas fa-bars"></i></div>
@@ -17,36 +18,47 @@
                     <ul>
                         <li class="right"><a href="index.html">Home</a></li>
                         <li class="right"><a href="portfolio.html">Portfolio</a></li>
-                        <li class="right"><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
         </nav>
     </header>
     <main class="container">
-        <div class="row" id="portfolio">
-            <h2>Some of my work.</h2>
+        <div id="portfolio">
+            <h1>My portfolio.</h1>
             <div class="row">
-                <div class="col-12 col-lg-4">
-                    <picture>
-                        <img class ="img-thumbnail" src="img/portfolio_react.png" alt="screenshot of react-project.">
-                    </picture>
-                  <h3>Project A</h3>
-                  <p>See my amazing project here.</p>
-                  <a href="#">View</a>
+                <div class="col-12 col-md-6">
+                    <div class="project">
+                        <picture>
+                            <img class="img-thumbnail" src="img/portfolio_react.png" alt="screenshot of react-project.">
+                        </picture>
+                      <h4>React portfolio sida.</h4>
+                      <p>See my amazing project here.</p>
+                      <button>View</button>
+                    </div>
+                
               </div>
-              <div class="col-12 col-lg-4">
-                <img src="img/" alt="Project B">
-                <h3>Project B</h3>
+              <div class="col-12 col-md-6">
+                <div class="project">
+                <picture>
+                    <img class="img-thumbnail" src="img/hundsida.png" alt="Hemsida hundpensionat">
+                </picture>
+                <h4>Hundpensionat hemsida.</h4>
                 <p>See my amazing project here.</p>
-                <a href="projectB.html">View</a>
+                <button>View</button>
+                </div>
               </div>
-              <div class="col-12 col-lg-4">
-                <img src="img/ProjectC.png" alt="Project C">
-                <h3>Project C</h3>
+              <div class="col-12 col-md-6">
+                <div class="project">
+                <picture>
+                    <img class="img-thumbnail" src="img/portfolio_gammal.png" alt="Gammalt portfolio projekt">
+                </picture>
+                <h4>Project C</h4>
                 <p>See my amazing project here.</p>
-                <a href="projectC.html">View</a>
+                <button>View</button>
+                </div>
               </div>
         </div>
+    </div>
     <footer>
         <div id="contact">
             <a href="https://m.me/100010404191156"><i class="fab fa-facebook-messenger"></i></a>
@@ -55,8 +67,8 @@
         </div>
         
     </footer>
-    </div>
 </main>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/a60ef7f392.js" crossorigin="anonymous"></script>
