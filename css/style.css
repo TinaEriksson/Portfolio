@@ -1,106 +1,159 @@
-
 body {
     margin: 0 auto;
     padding: 0;
 }
 
 :root {
-    --clr-primary-light:#F8EDE3;
-    --clr-secondary-light: #F8EDE3;
-    --clr-primary-dark: #798777;
-    --clr-secondary-dark: #171717;
-    --clr-darkGrey: #A2B29F;
-    --clr-midGrey: #BDD2B6;
+    /*background colors*/
+    --clr-primary-dark: #141414;
+    --clr-secondary-dark: #292929;
+    --clr-sectioncolor-dark: #8b8a8a;
+    --clr-sectioncolor-light: #a3a3a3;
+    --clr-primary-light: #ebebeb;
+    --clr-secondary-light: #e0e0e0;
+
+    /*text- and linkcolors*/
+    --clr-headline-large: white;
+    --clr-sectiontext-primary: #e4e3e3;
+    --clr-sectiontext-secondary: #1a1919;
+    --clr-linkcolor-primary: #b4adad;
+    --clr-linkcolor-secondary: rgb(147, 147, 187);
 }
 
-*
-*::before,
+* *::before,
 *::after {
-  /* Inkluderar padding och border i width och height utrökningar. */
-  box-sizing: border-box;
+    /* Inkluderar padding och border i width och height utrökningar. */
+    box-sizing: border-box;
 }
 
-.wrapper {    
+.wrapper {
     min-height: 100%;
     width: 100%;
     background-color: var(--clr-secondary-light);
-
-
 }
 
 .container {
     min-width: 100%;
     padding: 0;
+    background-color: var(--clr-secondary-light);
 }
 
-#mainHeader {
-
-    background-image:url("/img/background.jpg");
-    background-position: left;
-    min-height: 10em; 
+header {
+    background-color: var(--clr-secondary-dark);
+    min-height: 8em;
     min-width: 100%;
 }
 
-.navbar-dark{
-    padding: 2em;
-    min-width: 100%;
-    position: relative;
+#weather {
+    padding: 1em;
+    color: var(--clr-primary-light)
 }
 
-#menuButton{
+#temperature, 
+#icon {
+    display: inline-block;
+}
+
+#name {
+    font-family: 'Ultra', serif;
+    padding: 0.9em 0 0 0.3em;
+    font-size: 2.4rem;
+    color: var(--clr-primary-light);
+}
+
+#upButton {
+    display: none;
+    position: fixed;
+    bottom: 0.6em;
+    right: 0.8em;
+    z-index: 99;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 0 0.4em;
+    border-radius: 4px;
+}
+
+.navbar-dark {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    text-decoration: underline;
+    padding: 2em 1.8em;
+    min-width: 100%;
+    background-color: var(--clr-secondary-light);
+}
+
+#menuButton {
     color: var(--clr-primary-textcolor);
     font-size: 2.5rem;
     position: absolute;
     right: 0.8em;
+    top: 0em;
 }
 
-#menu {
+.menu {
     display: none;
 }
 
-#menu ul{
-    margin-top: 3.5em;
+.menu ul {
+    margin-top: 2em;
+    min-width: 100%;
 }
 
-#menu ul li {
+.menu ul li {
     list-style: none;
     margin-top: 0.7em;
 }
 
-.right{
+.right {
     text-align: end;
 }
 
-#menu a {
+.menu a {
     text-decoration: none;
     color: var(--clr-primary-textcolor);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 #biography_section,
-#cv__section, 
+#cv__section,
 #education,
 #work {
-    margin: 0.4em 0;
-    background-color: var(--clr-darkGrey);
-    color: var(--clr-textcolor);
+    background-color: var(--clr-sectioncolor-light);
     padding: 1em;
 }
 
-#cv__section, 
+#cv__section,
 #work {
-    background-color: var(--clr-midGrey);
+    background-color: var(--clr-sectioncolor-dark);
+}
+
+section p {
+    color: var(--clr-sectiontext-secondary);
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+section h2 h3 h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+section h2 {
+    font-size: 2.2rem;
 }
 
 #portfolio {
     padding: 2em;
-    margin: 1em 0;
+    margin: 0;
     background-color: var(--clr-midGrey);
 }
 
 #portfolio h1 {
     margin: 0 0 1em 0;
-    
 }
 
 #portfolio button {
@@ -108,29 +161,29 @@ body {
     padding: 0.1em 2em;
     text-decoration: 0;
     color: var(--clr-secondary-dark);
-
 }
 
-.project
-{
-    background-color: var(--clr-darkGrey);
-    margin: 0.5em;
-    padding: 1.5em;
+.project {
+    background-color: var(--clr-sectioncolor-light);
+    margin: 0.2em;
+    padding: 1em;
+    border: 0.15em solid var(--clr-primary-light)
 }
 
 .col-12 {
     padding: 0.5em;
 }
 
-#education h1, 
-#work h1, 
-#biography_section h1{
+#education h2", 
+#work h2,
+#biography_section h2 {
     margin: 0 0 0.5em 0.5em;
 }
 
 #cv__section a {
     text-decoration: none;
     color: var(--clr-primary-textcolor);
+    font-weight: 20%;
 }
 
 #contact {
@@ -138,10 +191,11 @@ body {
 }
 
 #cv__section button {
-    padding: 0.2em 1em;
-    border:0.11em solid var(--clr-primary-dark);
+    padding: 0.5em 1em;
+    border: 0.11em solid var(--clr-primary-dark);
+    font-size: 1.2rem;
     border-radius: 0.5em;
-    margin: 0;
+    margin: 0 0 1em 0;
 }
 
 #contact {
@@ -150,8 +204,9 @@ body {
     justify-content: center;
     gap: 2em;
 }
+
 #contact a {
-    color: var(--clr-textcolor);
+    color: var(--clr-linkcolor-primary);
     font-size: 3rem;
 }
 
@@ -162,35 +217,33 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-    
-    #biography_section,
-    #cv__section, 
-    #education,
-    #work {
-    background-color: var(--clr-darkGrey);
-    color: var(--clr-textcolor);
-    padding: 3em;
+
+    header {
+        min-height: 8em;
     }
 
-    .text-container {
-        padding: 1em;
-        border: 0.15em solid var(--clr-primary-dark);
-        min-height: 100%;
+    #upButton {
+        display: none;
+        position: fixed;
+        bottom: 1.2em;
+        right: 1em;
+        padding: 0.2em 0.6em;
+
     }
 
-    #mainHeader {
-        min-height: 1em;
+    #name {
+        font-size: 5rem;
     }
 
-    #menuButton{
+    #menuButton {
         display: none;
     }
 
-    #menu {
+    .menu {
         display: unset;
     }
 
-    #menu ul {
+    .menu ul {
         display: flex;
         flex-direction: row;
         gap: 2em;
@@ -198,8 +251,33 @@ footer {
         margin: 0;
     }
 
-    #menu ul li a {
+    .menu ul li a {
         color: var(--clr-secondary-dark);
+    }
+
+    #biography_section,
+    #cv__section,
+    #education,
+    #work {
+        background-color: var(--clr-darkGrey);
+        color: var(--clr-textcolor);
+        border: 0.15em solid var(--clr-primary-dark);
+        padding: 1em;
+        min-height: 100%;
+    }
+
+    section p {
+        color: var(--clr-sectiontext-secondary);
+        font-size: 1.3rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    section h2 h3 h4 {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    section h2 {
+        font-size: 2.5rem;
     }
 
     #biography_section,
@@ -208,25 +286,62 @@ footer {
     }
 
     #biography_section img {
-        height: 30vh;
-        width: 30vh;
+        min-height: 30vh;
+        min-width: 30vh;
     }
 
-    #education, 
+    #education,
     #work {
-        background-color:var(--clr-midGrey) ;
+        background-color: var(--clr-midGrey);
     }
 
     #contact {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
         gap: 3em;
         padding: 2em 1em;
     }
-    
-    #contact a:hover
-    {
-        color: var(--clr-primary-dark)
+
+    #contact a:hover {
+        color: var(--clr-primary-light)
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    #biography_section {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    #upButton {
+        display: none;
+        position: fixed;
+        font-size: 2em;
+        bottom: 0.8em;
+        right: 1em;
+    }
+
+    #name {
+        font-size: 6em;
+    }
+
+    .menu a:hover {
+        color: var(--clr-linkcolor-primary);
+    }
+
+    section p {
+        color: var(--clr-sectiontext-secondary);
+        font-size: 1.3rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    section h2 h3 h4 {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    section h2 {
+        font-size: 2rem;
     }
 }

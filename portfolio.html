@@ -7,21 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="stylesheet" href="css/style.css">
-    <title>Tina Eriksson - Home</title>
+    <title>Tina Eriksson</title>
 </head>
 <body>
-    <div class="wrapper">
-    <header id="mainHeader">
-        <nav class="navbar-dark">
-            <div id="menuButton"><i class="fas fa-bars"></i></div>
-                <div id="menu">
-                    <ul>
-                        <li class="right"><a href="index.html">Home</a></li>
-                        <li class="right"><a href="portfolio.html">Portfolio</a></li>
-                    </ul>
-                </div>
-        </nav>
+    <header>
+        <div id="weather">
+            <div id="description"></div>
+            <h1 id="temperature"></h1>
+            <div id="icon"></div>
+            <div id="location"></div>
+        </div>
+        <button onclick="topFunction()" id="upButton" title="Scroll up"><i class="fas fa-caret-up"></i></button>
     </header>
+    <nav class="navbar-dark">
+        <div id="menuButton"><i class="fas fa-bars"></i></div>
+            <div class="menu">
+                <ul>
+                    <li class="right"><a href="index.html">Home</a></li>
+                    <li class="right"><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+    </nav>
     <main class="container">
         <div id="portfolio">
             <h1>My portfolio.</h1>
@@ -31,18 +37,17 @@
                         <picture>
                             <img class="img-thumbnail" src="img/portfolio_react.png" alt="screenshot of react-project.">
                         </picture>
-                      <h4>React portfolio sida.</h4>
+                      <h4>React portfolio webbpage.</h4>
                       <p>See my amazing project here.</p>
                       <button>View</button>
                     </div>
-                
               </div>
               <div class="col-12 col-md-6">
                 <div class="project">
                 <picture>
                     <img class="img-thumbnail" src="img/hundsida.png" alt="Hemsida hundpensionat">
                 </picture>
-                <h4>Hundpensionat hemsida.</h4>
+                <h4>Dogcare webbpage.</h4>
                 <p>See my amazing project here.</p>
                 <button>View</button>
                 </div>
@@ -52,7 +57,7 @@
                 <picture>
                     <img class="img-thumbnail" src="img/portfolio_gammal.png" alt="Gammalt portfolio projekt">
                 </picture>
-                <h4>Project C</h4>
+                <h4>Old portfolio webbsite.</h4>
                 <p>See my amazing project here.</p>
                 <button>View</button>
                 </div>
