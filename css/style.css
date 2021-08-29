@@ -190,10 +190,6 @@ section h2 {
     font-weight: 20%;
 }
 
-#contact {
-    text-align: center;
-}
-
 #cv__section button {
     padding: 0.5em 1em;
     border: 0.11em solid var(--clr-primary-dark);
@@ -203,6 +199,10 @@ section h2 {
 }
 
 /***************Start of footer*******************/
+
+#contact {
+    text-align: center;
+}
 
 #contact {
     display: flex;
@@ -267,9 +267,9 @@ footer {
     #work {
         background-color: var(--clr-darkGrey);
         color: var(--clr-textcolor);
-        border: 0.15em solid var(--clr-primary-dark);
-        padding: 1em;
+        padding: 2em;
         min-height: 100%;
+        border: 0.1em solid var(--clr-sectioncolor-dark);
     }
 
     section p {
