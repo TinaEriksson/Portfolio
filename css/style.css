@@ -17,15 +17,13 @@ body {
     --clr-sectiontext-primary: #e4e3e3;
     --clr-sectiontext-secondary: #1a1919;
     --clr-linkcolor-primary: #b4adad;
-    --clr-linkcolor-secondary: rgb(147, 147, 187);
+    --clr-linkcolor-secondary: rgb(168, 168, 172);
 }
 
 * *::before,
 *::after {
-    /* Inkluderar padding och border i width och height utrökningar. */
     box-sizing: border-box;
 }
-
 .wrapper {
     min-height: 100%;
     width: 100%;
@@ -37,6 +35,8 @@ body {
     padding: 0;
     background-color: var(--clr-secondary-light);
 }
+
+/**********************Start of header.****************************/
 
 header {
     background-color: var(--clr-secondary-dark);
@@ -76,6 +76,8 @@ header {
     padding: 0 0.4em;
     border-radius: 4px;
 }
+
+/*******************start of navigation.*************************/
 
 .navbar-dark {
     position: -webkit-sticky;
@@ -118,6 +120,8 @@ header {
     color: var(--clr-primary-textcolor);
     font-size: 1.8rem;
 }
+
+/******************start of sections***********************/ 
 
 #biography_section,
 #cv__section,
@@ -174,7 +178,7 @@ section h2 {
     padding: 0.5em;
 }
 
-#education h2", 
+#education h2, 
 #work h2,
 #biography_section h2 {
     margin: 0 0 0.5em 0.5em;
@@ -198,6 +202,8 @@ section h2 {
     margin: 0 0 1em 0;
 }
 
+/***************Start of footer*******************/
+
 #contact {
     display: flex;
     flex-direction: row;
@@ -216,6 +222,7 @@ footer {
     min-height: 3em;
 }
 
+
 @media screen and (min-width: 768px) {
 
     header {
@@ -228,7 +235,6 @@ footer {
         bottom: 1.2em;
         right: 1em;
         padding: 0.2em 0.6em;
-
     }
 
     #name {
